@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ajaia Docs (AI-Native Assessment)
 
-## Getting Started
+A lightweight collaborative document editor inspired by Google Docs. Built for the Ajaia AI-Native Full Stack Developer Assessment.
 
-First, run the development server:
+## 🔗 Live Demo
+[https://ajaia-docs-4ofu.vercel.app](https://ajaia-docs-4ofu.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔐 Test Accounts (Mock Auth)
+This app uses mock authentication. Simply click on one of the seeded users to log in.
+- **Alice:** `alice@ajaia.test` (Owner)
+- **Bob:** `bob@ajaia.test` (Recipient for sharing)
+- **Carol:** `carol@ajaia.test` (Recipient for sharing)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
+- **Document Management:** Create, rename, and delete documents.
+- **Rich Text Editor:** Powered by TipTap, supporting Bold, Italic, Underline, Headings, and Lists.
+- **Autosave:** Debounced auto-saving to the database.
+- **Sharing:** Share documents with other users via email.
+- **File Import:** Upload `.txt` or `.md` files to create new editable documents.
+- **Ownership vs. Shared:** Clear separation of "Owned by me" and "Shared with me" in the dashboard.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Tech Stack
+- **Framework:** Next.js 14 (App Router, TypeScript)
+- **Styling:** Tailwind CSS
+- **Editor:** TipTap
+- **Database ORM:** Prisma
+- **Database:** Supabase (PostgreSQL)
+- **Deployment:** Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Local Setup
+1. Clone the repository
+2. Run `npm install`
+3. Add your `.env` file with `DATABASE_URL` and `DIRECT_URL` (PostgreSQL).
+4. Run `npx prisma db push`
+5. Run `npx prisma db seed` (to create test users)
+6. Run `npm run dev`
